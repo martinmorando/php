@@ -14,5 +14,7 @@ $message = "$a $b";
 // Alternative C
 $message = "${a} ${b}";
 
+// Concatenation
+$message .= ".\n";
 echo $message;
 ?>
