@@ -1,5 +1,7 @@
 <?php
 /*
+	Functions
+	
 	Functions names in camel case: buyBitcoin()
 	Variable names in snake case: $buy_bitcoin
 */
