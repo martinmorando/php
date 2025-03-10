@@ -5,6 +5,7 @@
 	Functions names in camel case: buyBitcoin()
 	Variable names in snake case: $buy_bitcoin
 */
+	
 function jump() {
 	return 1; // Function stops here
 	echo "jump"; // Won't get printed
