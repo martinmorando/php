@@ -36,6 +36,17 @@ if (0) {
 }
 
 
+// Logical operators.
+// && operator has higher operator precedence than ||. Use ()
+$b1 = TRUE;
+$b2 = TRUE;
+$x = $b1 && $b2;  // And operator. Also valid "and" (lower precedence)
+$x = $b1 || $b2;  // Or operator. Also valid "or" (lower precedence)
+$x = $b1 xor $b2; // Exclusive or: one or the other, not both
+$x = !$b1;        // Not operator
+
+
+
 // Switch. If there's no break, it will continue to the next case
 $currency = "BTC";
 switch ($currency) {

@@ -26,4 +26,8 @@ echo "\n" . intval("AA", 16);       // 170
 // Read user input (terminal). Should validate user input
 $user_input = readline("Type y/n: ");
 echo $user_input;
+
+
+// Include another PHP file
+include "5-1-include.php";
 ?>
