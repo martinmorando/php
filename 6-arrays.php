@@ -3,8 +3,12 @@
    Arrays
     - 0 based-index
     - Using "$a" as name of the array to focus on the rest
+    - Both types, ordered and associative arrays, are maps (they store: key => value)
 */
 
+/*
+   Ordered arrays (indexed by numerical indices)
+*/
 // [Create]
 // Alternative A
 $a = array(1, 2, 3, 4, 5, "New York");  // Mixed data types
@@ -60,4 +64,54 @@ $a[] = 6;
 // Add element/s to the end. Returns new number of elements
 echo "\nAdd single element: "    . array_push($a, "programmers");
 echo "\nAdd multiple elements: " . array_push($a, "codebreakers", "hackers"); 
+
+
+
+
+
+/*
+    Associative arrays (indexed by numerical or string keys)
+*/
+// [Create]
+// Alternative A: using array()
+$b = array(
+   "a" => 1,
+   "b" => 2,
+   "c" => 3
+);
+
+// Alternative B: "short array syntax"
+$b = ["a" => 1, "b" => 2, "c" =>3];
+
+
+
+// [Print]
+print_r($b);
+
+
+
+// [Access and replace]
+// Acess item c
+echo "\n" . $b["c"];
+
+// Replace value of specific key
+$b["c"] = "asd";
+
+
+
+// [Check if item exists]
+echo isset($b["c"]);
+
+
+
+// [Delete]
+// Delete specific item based on key
+unset($b["c"]);
+
+
+// [Join arrays]
+// Using +: if keys repeat in both arrays, it keeps original
+$c = ["a" => 23, "d" => 32];
+$d = $b + $c;
+print_r($d);
 ?>
