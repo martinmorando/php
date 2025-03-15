@@ -40,4 +40,22 @@ echo "\n";
 echo "\nValue of pi: "                              . pi();
 echo "\nValue of e: "                               . M_E;
 echo "\n";
+
+// Return integer value
+echo "\n" . intval(2.34);           // 2
+echo "\n" . intval("2.34");         // 2
+echo "\n" . intval(-2.34);          // -2
+echo "\n" . intval("-2.34");        // -2
+echo "\n" . intval("asd");          // 0
+
+// Differences with floor()
+// https://stackoverflow.com/questions/36924689/php-intval-vs-floor
+echo "\n" . intval(-0.1);           // 0   truncates decimal part
+echo "\n" . floor(-0.1);            // -1  rounds down to the nearest integer
+
+// Binary to decimal
+echo "\n" . intval("10101010", 2);  // 170
+
+// Hexadecimal to decimal
+echo "\n" . intval("AA", 16);       // 170
 ?>
