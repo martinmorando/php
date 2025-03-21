@@ -30,6 +30,12 @@ if ($a === $b) {
 $cond = $a !== $b ? "\nnot equal" : "\nequal";
 
 
+// Null-coalescing operator
+// Returns the first value only if it exists and is not null; if not, returns the second value
+$c = NULL;
+echo $c ?? "\nHellooo";
+
+
 // Truthy, falsy. Most values and expressions are treated as truthy even though they are not boolean values. Treated as falsy: 0, "0", null, empty strings, empty arrays, undefined variable
 if (0) {
 	echo "\nThis will never happen.";
