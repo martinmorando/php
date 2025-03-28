@@ -1,6 +1,7 @@
 <?php
 /*
-    Connect to a PostgreSQL DB and execute a select statement
+    Connect to a PostgreSQL DB using PHP Data Objects (PDO) (also works with MySQL, MariaDB and SQLite) and execute a select statement.
+
 
     - Use prepared statements to reduce the risk of (successful) SQL injection attacks
     - Use of colons (:) in array keys is optional. Read more: https://www.php.net/manual/en/pdo.prepare.php
