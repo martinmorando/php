@@ -5,12 +5,25 @@
 */
 
 $file_path = "new_file.txt";
-$file_pointer = fopen($file_path, "r");      // Read mode
-$file_size = filesize($file_path);      
-$content = fread($file_pointer, $file_size); // Read n bytes
 
-echo $content;
+// Check if the file exists to prevent errors
+if (file_exists($file_path) === true) {
 
-// Disconnect to prevent unsaved changes and data corruption
-fclose($file_pointer);
+    // Create the file pointer, in read mode
+    $file_pointer = fopen($file_path, "r");
+    
+    // Get the file size (required for fread())
+    $file_size = filesize($file_path);
+
+    // Read the entire contents of the file
+    $content = fread($file_pointer, $file_size);
+
+    // Output the content of the file
+    echo $content;
+
+    // Disconnect to prevent unsaved changes and data corruption
+    fclose($file_pointer);
+} else {
+    echo "Error: file $file_path does not exist";
+}
 ?>
